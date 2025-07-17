@@ -60,3 +60,25 @@ Follow these steps to run the project locally on your machine:
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/your-username/skymood-weather-app.git
+```
+### 2️⃣ Navigate to the Project Folder
+```bash
+cd calc-you-later
+```
+### 3️⃣ Open in Browser
+Simply open index.html in your preferred browser.
+
+### 4️⃣ Configure API Key
+Sign up at OpenWeather to get your API key.
+Replace the apiKey variable in script.js with your own API key.
+
+---
+
+## 🙌 Connect with Me
+<p align="center"> <a href="https://www.linkedin.com/in/samarth-jaiswal-72b67b313/" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white"/> </a> <a href="mailto:samjaiswal51@gmail.com"> <img src="https://img.shields.io/badge/Email-Send-red?style=for-the-badge&logo=gmail&logoColor=white"/> </a> </p>
+
+---
+
+## ⚠️ Note
+🧪 This project is a frontend-only weather app built to demonstrate skills in HTML, CSS, JavaScript, and API integration. It relies on the OpenWeather API for weather data and does not include backend functionalities.
+
