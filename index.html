@@ -14,15 +14,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h2>Skymood</h2>
+    
     <div class="container">
+        
       <div class="header">
         <div class="search-box">
           <input
             type="text"
-            placeholder="Enter the location you want to search"
+            placeholder="Enter the location"
             class="input-box"
           />
-          <button class="fa-solid fa-magnifying-glass"></button>
+          <button id="searchBtn" class="fa-solid fa-magnifying-glass"></button>
         </div>
       </div>
       <div class="weather-body">
@@ -38,6 +41,7 @@
               <span id="humidity">45%</span>
               <p>Humidity</p>
             </div>
+            </div>
           <div class="wind">
             <i class="fa-solid fa-wind"></i>
             <div class="text">
@@ -45,8 +49,9 @@
               <p>Wind Speed</p>
             </div>
           </div>
-        </div>
+        
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
