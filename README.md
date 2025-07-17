@@ -13,7 +13,7 @@
 ## 🌍 Live Demo
 
 🧑‍💻 **Check it Live Here**:  
-🔗 
+🔗 https://skymood.vercel.app/
 
 ---
 
@@ -48,8 +48,8 @@
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="src/assets/weather1.png" alt="Weather App Home" width="250" />
-  <img src="src/assets/weather2.png" alt="Weather Details" width="250" />
+  <img src="assets/weather1.png" alt="Weather App Home" width="250" />
+  <img src="assets/weather2.png" alt="Weather Details" width="250" />
 </div>
 
 ---
