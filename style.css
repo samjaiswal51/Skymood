@@ -1,108 +1,264 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    font-family: sans-serif;
+/* --- Global Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-body{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1C1C1E, #2C2C2E, #3A3A3C, #48484A);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  flex-direction: column;
 }
 
-.container{
-    width: 400px;
-    height: min-content;
-    background-color: white;
-    border-radius: 12px;
-    padding: 28px;
+/* --- Header --- */
+h2 {
+  margin: 10px;
+  color: #E5E5EA;
+  text-shadow: 2px 2px 5px #48484A;
+  animation: pulse 2s infinite;
 }
 
-.search-box{
-    width: 100%;
-    height: min-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.container {
+  width: 400px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.08));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  padding: 28px;
+  animation: slideUp 1s ease;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.search-box input{
-    width: 84%;
-    font-size: 20px;
-    text-transform: capitalize;
-    color: black;
-    background-color: skyblue;
-    padding: 12px 6px;
-    border-radius: 14px;
+
+.container:hover {
+  transform: scale(1.015);
 }
 
-.search-box input::placeholder{
-    color: black;
-    opacity: 0.5;
+/* --- Search Box --- */
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.search-box button{
-    width: 46px;
-    height: 46px;
-    background-color: dodgerblue;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
+.search-box input {
+  width: 84%;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #E5E5EA;
+  background-color: #48484A;
+  padding: 12px 10px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
 }
 
-.search-box button:hover{
-    color: dodgerblue;
-    background-color: skyblue;
+.search-box input:focus {
+  box-shadow: 0 0 10px #D1D1D6;
 }
 
-.weather-body img{
-    width: 60%;
+.search-box input::placeholder {
+  color: #E5E5EA;
+  opacity: 0.6;
 }
 
-.weather-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-block: 20px;
+.search-box button {
+  width: 46px;
+  height: 46px;
+  background-color: #E5E5EA;
+  color: #2C2C2E;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.weather-box{
-    margin-block: 20px;
-    text-align: center;
-
+.search-box button:hover {
+  background-color: #1C1C1E;
+  color: #E5E5EA;
+  box-shadow: 0 0 8px #E5E5EA;
+  transform: scale(1.1);
 }
 
-.weather-box .temprature{
-    font-size: 40px;
-    font-weight: 700;
-    position: relative;
+.search-box button::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, #e5e5ea44 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.6s, opacity 1s;
 }
 
-.weather-box .temprature sup{
-    font-size: 20px;
-    position: absolute;
-    font-weight: 500;
+.search-box button:active::after {
+  transform: scale(1);
+  opacity: 1;
 }
 
-.weather-box .description{
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-
+/* --- Weather Body --- */
+.weather-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in;
 }
 
-.weather-details{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-
+.weather-body img {
+  width: 60%;
+  animation: float 3s ease-in-out infinite;
 }
 
+/* --- Weather Box --- */
+.weather-box {
+  text-align: center;
+  margin-top: 20px;
+  color: #E5E5EA;
+}
+
+.weather-box .temprature {
+  font-size: 42px;
+  font-weight: 700;
+  position: relative;
+  animation: shimmer 2s infinite;
+}
+
+.weather-box .temprature sup {
+  font-size: 20px;
+  position: absolute;
+  font-weight: 400;
+}
+
+.weather-box .description {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 5px;
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+/* --- Weather Details --- */
+.weather-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  color: #E5E5EA;
+  animation: bounceIn 1.4s ease-in;
+}
+
+.humidity,
+.wind {
+  display: flex;
+  align-items: center;
+}
+
+.humidity {
+  margin-left: 20px;
+}
+
+.wind {
+  margin-right: 20px;
+}
+
+.weather-details i {
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+.weather-details i:hover {
+  transform: scale(1.2);
+  color: #D1D1D6;
+}
+
+.weather-details .text {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.weather-details .text span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { text-shadow: none; }
+  50% { text-shadow: 0 0 8px rgba(255,255,255,0.3); }
+  100% { text-shadow: none; }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+  80% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
