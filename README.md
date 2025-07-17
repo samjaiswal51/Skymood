@@ -59,11 +59,11 @@ Follow these steps to run the project locally on your machine:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/skymood-weather-app.git
+git clone https://github.com/your-username/Skymood.git
 ```
 ### 2️⃣ Navigate to the Project Folder
 ```bash
-cd calc-you-later
+cd Skymood
 ```
 ### 3️⃣ Open in Browser
 Simply open index.html in your preferred browser.
