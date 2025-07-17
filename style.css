@@ -63,3 +63,46 @@ body{
 .weather-body img{
     width: 60%;
 }
+
+.weather-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+}
+
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+
+}
+
+.weather-box .temprature{
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+}
+
+.weather-box .temprature sup{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 500;
+}
+
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
